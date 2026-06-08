@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1 大阪市區</title>
+
+    <link rel="stylesheet" href="day.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>✈️ Day1 大阪市區</h1>
+    </header>
+    <button class="add-btn" onclick="openForm()">＋ 新增行程
+</button>
+
+    <div class="container">
+
+        <div class="form-card">
+
+            <h2>新增行程</h2>
+
+            <input type="time" id="time">
+
+            <input
+                type="text"
+                id="place"
+                placeholder="景點名稱">
+
+            <input
+                type="text"
+                id="transport"
+                placeholder="交通方式">
+
+            <input
+                type="number"
+                id="cost"
+                placeholder="費用(日圓)">
+
+            <textarea
+                id="note"
+                placeholder="備註"></textarea>
+
+            <button onclick="addSchedule()">
+                新增行程
+            </button>
+
+        </div>
+
+        <div id="scheduleList">
+
+        </div>
+        
+
+    </div>
+
+    <script src="day1.js"></script>
+
+</body>
+
+</html>

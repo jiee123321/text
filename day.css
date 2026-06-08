@@ -1,0 +1,45 @@
+/* ===== Day1 工具專用 ===== */
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:20px auto;
+}
+
+/* 表單 */
+.form-card{
+    display:none;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-card input,
+.form-card textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+/* 新增按鈕 */
+.add-btn{
+    display:block;
+    margin:20px auto;
+    background:#003366;
+    color:white;
+    padding:12px 20px;
+    border-radius:10px;
+    border:none;
+}
+
+/* 卡片 */
+.schedule-card{
+    background:white;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:15px;
+    border-left:5px solid #003366;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,162 @@
+/* =========================
+全站基本設定
+========================= */
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+    color:#333;
+}
+
+/* =========================
+導覽列
+========================= */
+
+nav{
+    background:#003366;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:15px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#ffd700;
+}
+
+/* =========================
+Hero
+========================= */
+
+.hero{
+    position:relative;
+}
+
+.hero img{
+    width:100%;
+    height:450px;
+    object-fit:cover;
+}
+
+.hero-text{
+    position:absolute;
+    left:50px;
+    top:180px;
+    color:white;
+    text-shadow:0 0 10px rgba(0,0,0,0.8);
+}
+
+/* =========================
+卡片（重點：懸浮感）
+========================= */
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:40px;
+}
+
+.card{
+    width:300px;
+    background:white;
+    border-radius:15px;
+
+    /* ⭐懸浮感核心 */
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
+
+    transition:0.3s ease;
+    overflow:hidden;
+}
+
+/* ⭐滑鼠移上去浮起來 */
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 12px 28px rgba(0,0,0,0.25);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.card-content h3{
+    margin-top:0;
+}
+
+/* =========================
+按鈕懸浮
+========================= */
+
+.card a{
+    display:inline-block;
+    background:#003366;
+    color:white;
+    text-decoration:none;
+    padding:8px 14px;
+    border-radius:8px;
+    margin-top:10px;
+    transition:0.3s;
+}
+
+.card a:hover{
+    background:#0055aa;
+}
+
+/* =========================
+RWD
+========================= */
+
+@media screen and (max-width:768px){
+
+    nav{
+        flex-direction:column;
+        padding:10px;
+    }
+
+    .hero img{
+        height:250px;
+    }
+
+    .hero-text{
+        top:90px;
+        left:20px;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+        padding:20px;
+    }
+
+    .card{
+        width:95%;
+    }
+}
