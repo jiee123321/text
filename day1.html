@@ -11,54 +11,149 @@
 
 <body>
 
-    <header>
-        <h1>✈️ Day1 大阪市區</h1>
-    </header>
-    <button class="add-btn" onclick="openForm()">＋ 新增行程
-</button>
+<header>
+    <h1>✈️ Day1 大阪市區</h1>
+</header>
 
-    <div class="container">
+<div class="container">
 
-        <div class="form-card">
+    <!-- 官方攻略 -->
 
-            <h2>新增行程</h2>
+    <h2 class="section-title">📖 行程表</h2>
 
-            <input type="time" id="time">
+    <div class="spot-card">
 
-            <input
-                type="text"
-                id="place"
-                placeholder="景點名稱">
+        <button class="spot-title">
+            10:00｜抵達關西機場 (KIX)
+        </button>
 
-            <input
-                type="text"
-                id="transport"
-                placeholder="交通方式">
+        <div class="spot-content">
+            <p>辦理入境、領取行李</p>
 
-            <input
-                type="number"
-                id="cost"
-                placeholder="費用(日圓)">
+            <h4>🚆 交通建議</h4>
+            <p>南海電鐵 Rapi:t 或空港急行</p>
 
-            <textarea
-                id="note"
-                placeholder="備註"></textarea>
-
-            <button onclick="addSchedule()">
-                新增行程
-            </button>
-
+            <h4>📝 備註</h4>
+            <p>建議先購買 ICOCA 卡</p>
         </div>
-
-        <div id="scheduleList">
-
-        </div>
-        
 
     </div>
 
-    <script src="day1.js"></script>
+    <div class="spot-card">
+
+        <button class="spot-title">
+            11:00 - 11:45｜機場 → 新今宮
+        </button>
+
+        <div class="spot-content">
+            <p>搭乘南海電鐵至新今宮站</p>
+
+            <h4>🧳 行李處理</h4>
+            <p>可寄放於站內 Coin Locker</p>
+        </div>
+
+    </div>
+
+    <div class="spot-card">
+
+        <button class="spot-title">
+            12:00 - 14:00｜通天閣 & 新世界
+        </button>
+
+        <div class="spot-content">
+
+            <h4>📍 景點</h4>
+            <p>大阪經典昭和風商店街</p>
+
+            <h4>🍴 推薦美食</h4>
+            <ul>
+                <li>八重勝</li>
+                <li>達摩炸串</li>
+            </ul>
+
+            <h4>📸 拍照建議</h4>
+            <p>中午陽光照射通天閣最漂亮</p>
+
+        </div>
+
+    </div>
+
+    <div class="spot-card">
+
+        <button class="spot-title">
+            14:30 - 15:30｜難波八阪神社
+        </button>
+
+        <div class="spot-content">
+
+            <h4>🚆 交通</h4>
+            <p>南海難波站步行約6分鐘</p>
+
+            <h4>📸 必拍</h4>
+            <p>12公尺巨大獅子殿</p>
+
+        </div>
+
+    </div>
+
+    <div class="spot-card">
+
+        <button class="spot-title">
+            18:00｜道頓堀 & 心齋橋
+        </button>
+
+        <div class="spot-content">
+
+            <h4>📍 重點</h4>
+            <p>固力果跑跑人、螃蟹招牌</p>
+
+            <h4>🛍️ 推薦</h4>
+            <p>藥妝、唐吉訶德購物</p>
+
+        </div>
+
+    </div>
+
+    <!-- 自訂行程 -->
+
+   
+
+    <button class="add-btn" onclick="openForm()">
+        ＋ 新增行程
+    </button>
+
+    <div class="form-card">
+
+        <h3>新增行程</h3>
+
+        <input type="time" id="time">
+
+        <input type="text"
+               id="place"
+               placeholder="景點名稱">
+
+        <input type="text"
+               id="transport"
+               placeholder="交通方式">
+
+        <input type="number"
+               id="cost"
+               placeholder="費用(日圓)">
+
+        <textarea id="note"
+                  placeholder="備註"></textarea>
+
+        <button onclick="addSchedule()">
+            新增
+        </button>
+
+    </div>
+
+    <div id="scheduleList"></div>
+
+</div>
+
+<script src="day1.js"></script>
 
 </body>
-
 </html>

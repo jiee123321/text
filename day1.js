@@ -39,8 +39,41 @@ function renderSchedules(){
     });
 }
 function openForm(){
-    document.querySelector(".form-card").style.display = "block";
+
+    const form =
+        document.querySelector(".form-card");
+
+    if(form.style.display === "block"){
+
+        form.style.display = "none";
+
+    }else{
+
+        form.style.display = "block";
+
+    }
 }
+document.querySelectorAll(".spot-title")
+.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        const content =
+            button.nextElementSibling;
+
+        if(content.style.display==="block"){
+
+            content.style.display="none";
+
+        }else{
+
+            content.style.display="block";
+
+        }
+
+    });
+
+});
 
 /* ⭐⭐⭐ 關鍵：第一次載入要渲染 */
 renderSchedules();
